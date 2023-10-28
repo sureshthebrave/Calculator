@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <input type="text" id="display">
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button class="operator" id="c" onclick="document.getElementById('display').value=''">C</button></td>
+          <td><button class="operator" onclick="document.getElementById('display').value+='/'">/</button></td>
+          <td><button class="operator" onclick="document.getElementById('display').value+='*'">*</button></td>
+          <td><button class="operator"  id="c" onclick="backspace()">B</button></td>
+        </tr>
+        <tr>
+          <td><button class="Number" onclick="document.getElementById('display').value+='7'">7</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='8'">8</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='9'">9</button></td>
+          <td><button class="operator" onclick="document.getElementById('display').value+='-'">-</button></td>
+        </tr>
+        <tr>
+          <td><button class="Number" onclick="document.getElementById('display').value+='4'">4</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='5'">5</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='6'">6</button></td>
+          <td><button class="operator" onclick="document.getElementById('display').value+='+'">+</button></td>
+        </tr>
+        <tr>
+          <td><button class="Number" onclick="document.getElementById('display').value+='1'">1</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='2'">2</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='3'">3</button></td>
+          <td rowspan="2"><button class="operator" id="c" onclick="solution()">=</button></td>
+        </tr>
+        <td><button class="operator" onclick="document.getElementById('display').value+='('">(</button></td>
+          <td><button class="Number" onclick="document.getElementById('display').value+='0'">0</button></td>
+          <td><button class="operator" onclick="document.getElementById('display').value+=')'">)</button></td>
+      </table>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
